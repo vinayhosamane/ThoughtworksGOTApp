@@ -91,10 +91,10 @@ class Battle: Decodable {
         self.location = location
         self.region = region
         self.note = note
+    
     }
-    
-    
-    
+
 }
+
 
 

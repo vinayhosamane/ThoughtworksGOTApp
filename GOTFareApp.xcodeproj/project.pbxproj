@@ -15,9 +15,9 @@
 		D43FD224209DE9C8003AEBD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43FD222209DE9C8003AEBD3 /* LaunchScreen.storyboard */; };
 		D43FD22F209DE9C8003AEBD3 /* GOTFareAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD22E209DE9C8003AEBD3 /* GOTFareAppTests.swift */; };
 		D43FD23A209DE9C8003AEBD3 /* GOTFareAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD239209DE9C8003AEBD3 /* GOTFareAppUITests.swift */; };
-		D43FD249209DEAFF003AEBD3 /* KingProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD248209DEAFF003AEBD3 /* KingProfile.swift */; };
+		D43FD249209DEAFF003AEBD3 /* Battles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD248209DEAFF003AEBD3 /* Battles.swift */; };
 		D43FD24C209DF20A003AEBD3 /* GOTServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD24B209DF20A003AEBD3 /* GOTServiceHelper.swift */; };
-		D43FD24E209E2DB7003AEBD3 /* KingRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD24D209E2DB7003AEBD3 /* KingRating.swift */; };
+		D43FD24E209E2DB7003AEBD3 /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD24D209E2DB7003AEBD3 /* King.swift */; };
 		D43FD250209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD24F209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift */; };
 		D43FD253209ECA5B003AEBD3 /* BussinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD252209ECA5B003AEBD3 /* BussinessLogic.swift */; };
 		D43FD257209ECFD1003AEBD3 /* GOTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD256209ECFD1003AEBD3 /* GOTTableViewCell.swift */; };
@@ -55,9 +55,9 @@
 		D43FD235209DE9C8003AEBD3 /* GOTFareAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOTFareAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43FD239209DE9C8003AEBD3 /* GOTFareAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTFareAppUITests.swift; sourceTree = "<group>"; };
 		D43FD23B209DE9C8003AEBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D43FD248209DEAFF003AEBD3 /* KingProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingProfile.swift; sourceTree = "<group>"; };
+		D43FD248209DEAFF003AEBD3 /* Battles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battles.swift; sourceTree = "<group>"; };
 		D43FD24B209DF20A003AEBD3 /* GOTServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTServiceHelper.swift; sourceTree = "<group>"; };
-		D43FD24D209E2DB7003AEBD3 /* KingRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingRating.swift; sourceTree = "<group>"; };
+		D43FD24D209E2DB7003AEBD3 /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
 		D43FD24F209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameofthronesViewControllerViewModel.swift; sourceTree = "<group>"; };
 		D43FD252209ECA5B003AEBD3 /* BussinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BussinessLogic.swift; sourceTree = "<group>"; };
 		D43FD256209ECFD1003AEBD3 /* GOTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 		D43FD247209DEAD4003AEBD3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D43FD248209DEAFF003AEBD3 /* KingProfile.swift */,
-				D43FD24D209E2DB7003AEBD3 /* KingRating.swift */,
+				D43FD248209DEAFF003AEBD3 /* Battles.swift */,
+				D43FD24D209E2DB7003AEBD3 /* King.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,9 +318,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43FD219209DE9C3003AEBD3 /* ViewController.swift in Sources */,
-				D43FD24E209E2DB7003AEBD3 /* KingRating.swift in Sources */,
+				D43FD24E209E2DB7003AEBD3 /* King.swift in Sources */,
 				D43FD21F209DE9C3003AEBD3 /* GOTFareApp.xcdatamodeld in Sources */,
-				D43FD249209DEAFF003AEBD3 /* KingProfile.swift in Sources */,
+				D43FD249209DEAFF003AEBD3 /* Battles.swift in Sources */,
 				D43FD253209ECA5B003AEBD3 /* BussinessLogic.swift in Sources */,
 				D43FD24C209DF20A003AEBD3 /* GOTServiceHelper.swift in Sources */,
 				D43FD217209DE9C3003AEBD3 /* AppDelegate.swift in Sources */,

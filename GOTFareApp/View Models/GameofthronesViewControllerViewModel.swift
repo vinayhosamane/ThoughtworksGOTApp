@@ -21,15 +21,16 @@ protocol loadGOTData {
 }
 
 var battlesList:[Battle]?
-var kingsList: [King]?
-
+var allKings = [King]()
 
 let GOTService:GOTServiceHelper = GOTServiceHelper()
 
 class GameofthronesViewControllerViewModel: loadGOTData {
+    var tableDelegate:ViewController?
+    
     func getKingName(index: Int) -> String {
-       // return kingsList![index].kingName!
-        return "Joffrey/Tommen Baratheon"
+        return allKings[index].kingName!
+       // return "Joffrey/Tommen Baratheon"
     }
     
     func getKingEloRating(index: Int) -> String {
@@ -53,20 +54,24 @@ class GameofthronesViewControllerViewModel: loadGOTData {
     }
     
     func getKingBannerImage(index: Int) -> UIImage {
-       // return UIImage(imageLiteralResourceName: kingsList![index].bannerImage!)
-        return UIImage(named: "Stark")!
+        return allKings[index].bannerImage!
+       // return UIImage(named: "Lannister")!
     }
     
    
     //Load data from web service
     func loadGameofthronesDataFromWebService() {
         
-        GOTService.load(withSuccess: { (allKings) in
+        GOTService.load(withSuccess: { (kings) in
+        
+            allKings = kings
             
-            battlesList = allKings
+            DispatchQueue.main.async {
+                self.tableDelegate?.gotTableView.reloadData()
+            }
+            
             //Apply bussiness Logic
-            
-           
+        
         }) { (error) in
             print(error)
         }
@@ -78,9 +83,27 @@ class GameofthronesViewControllerViewModel: loadGOTData {
 //            return nil
 //        }
         
-       // return kings.count
+       return allKings.count
         
-        return 5
+      //  return 6
+    }
+    
+    static func addMyKing(king: King) {
+        kingsList.append(king)
+    }
+    
+    static func getMyKingIfExists(king: King) -> King?{
+        for eachKing in kingsList {
+            if eachKing.kingName == king.kingName{
+                return eachKing
+            }
+        }
+        
+        return nil
+    }
+    
+    class func getallKings() -> [King] {
+        return kingsList
     }
     
 }

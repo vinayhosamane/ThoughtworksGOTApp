@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
  
-    let GOTViewModel = GameofthronesViewControllerViewModel()
+    var GOTViewModel = GameofthronesViewControllerViewModel()
     
     @IBOutlet weak var gotTableView:UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GOTViewModel.tableDelegate = self
         
         self.navigationController?.navigationBar.backgroundColor = UIColor.yellow
         
@@ -35,12 +37,14 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "GOT_CELL", for: indexPath) as? GOTTableViewCell
         
+        cell?.accessoryType = .disclosureIndicator
+        
         cell?.kingNameLabel.text = GOTViewModel.getKingName(index:indexPath.item)
         cell?.kingEloRatingLabel.text = GOTViewModel.getKingEloRating(index:indexPath.item)
         cell?.kingTotalAttacksLabel.text = GOTViewModel.getKingTotalAttacks(index: indexPath.item)
         cell?.kingTotalDefenceLabel.text = GOTViewModel.getKingTotalDefence(index: indexPath.item)
         cell?.kingTotalWinsLabel.text = GOTViewModel.getKingTotalWins(index: indexPath.item)
-        cell?.kingBanerImage.image = #imageLiteral(resourceName: "Stark")
+        cell?.kingBanerImage.image = GOTViewModel.getKingBannerImage(index: indexPath.item)
         
         return cell!
         }

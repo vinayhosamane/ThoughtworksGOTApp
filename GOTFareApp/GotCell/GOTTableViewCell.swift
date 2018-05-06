@@ -20,7 +20,6 @@ class GOTTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        kingBanerImage = UIImageView()
         // Initialization code
     }
 

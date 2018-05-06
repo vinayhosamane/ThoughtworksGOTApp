@@ -7,15 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 protocol NetworkRequestProtocol {
     
-    func load(withSuccess SuccessBlock: @escaping ([Battle]) -> (),withFailure ErrorBlock: @escaping (NSError)->())
+    func load(withSuccess SuccessBlock: @escaping ([King]) -> (),withFailure ErrorBlock: @escaping (NSError)->())
     func makeModel(kingJson: [String: AnyObject])
     
 }
 
 var kingModels = [Battle]()
+var kingsList = [King]()
 
 class GOTServiceHelper:NetworkRequestProtocol {
     
@@ -24,7 +26,7 @@ class GOTServiceHelper:NetworkRequestProtocol {
         return URL(string: baseUrl)!
     }
     
-    func load(withSuccess SuccessBlock: @escaping ([Battle]) -> (),withFailure ErrorBlock: @escaping (NSError)->() ) {
+    func load(withSuccess SuccessBlock: @escaping ([King]) -> (),withFailure ErrorBlock: @escaping (NSError)->() ) {
         
         let configuration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
@@ -52,9 +54,14 @@ class GOTServiceHelper:NetworkRequestProtocol {
             }
             
             //Calculating rating of kings
-            
+            self?.filterUniquenamesInTheArray()
  
             print(kingModels)
+            
+            DispatchQueue.main.async {
+                SuccessBlock(kingsList)
+            }
+            
             // completion(self?.decode(data))
         })
         task.resume()
@@ -71,4 +78,68 @@ class GOTServiceHelper:NetworkRequestProtocol {
         kingModels.append(myBattle)
         
     }
+    
+    func filterUniquenamesInTheArray() {
+        var testArray = [String]()
+        
+        for item in kingModels {
+            if testArray.contains(item.attacker_king!) {
+                //dont add
+            }
+            else {
+                testArray.append(item.attacker_king!)
+               kingsList.append(King(kingName: item.attacker_king, bannerImage: self.getImageForKing(kingName: item.attacker_king!))!)
+            }
+            
+            if testArray.contains(item.defender_king!) {
+                //dont add
+            }
+            else {
+                testArray.append(item.defender_king!)
+                 kingsList.append(King(kingName: item.defender_king, bannerImage: self.getImageForKing(kingName: item.defender_king!))!)
+            }
+        }
+        
+        print(testArray)
+        
+    }
+    
+    func getImageForKing(kingName: String) -> UIImage? {
+        
+        var img:UIImage?
+        
+        switch(kingName){
+        case "Joffrey/Tommen Baratheon": do {
+               img = #imageLiteral(resourceName: "Lannister")
+               break
+            }
+        case "Balon/Euron Greyjoy": do {
+            img = #imageLiteral(resourceName: "Greyjoy")
+            break
+            }
+        case "Mance Rayder": do {
+            img = #imageLiteral(resourceName: "Mance")
+            break
+            }
+        case "Stannis Baratheon": do {
+            img = #imageLiteral(resourceName: "Stannis")
+             break
+            }
+        case "Renly Baratheon": do {
+            img = #imageLiteral(resourceName: "Renly")
+             break
+            }
+        case "Robb Stark": do {
+            img =  #imageLiteral(resourceName: "Stark")
+             break
+            }
+        default:
+            img = #imageLiteral(resourceName: "Stark")
+            break
+        }
+        
+        return img
+        
+    }
+    
 }
