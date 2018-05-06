@@ -14,12 +14,13 @@ class King: NSObject {
     var kingName: String?
     var totalDefence: Int?
     var totalAttacks:Int?
+    var bannerImage: String?
     
     var totalWins: Int = 0
     var totalLoss: Int = 0
-    var eloRating: Int = 1000
+    var eloRating: Int = 400
     
-    init?(kingName:String?,totalDefence:Int?,totalAttacks:Int?,totalWins:Int?,totalLoss:Int?) {
+    init?(kingName:String?,totalDefence:Int?,totalAttacks:Int?,totalWins:Int?,totalLoss:Int?,bannerImage:String?) {
         
         super.init()
         
@@ -27,6 +28,7 @@ class King: NSObject {
                   let totalDefence = totalDefence,
                   let totalAttacks = totalAttacks,
                   let totalWins = totalWins,
+                  let bannerImage = bannerImage,
                   let totalLoss = totalLoss else {
                 return
         }
@@ -36,12 +38,11 @@ class King: NSObject {
         self.totalAttacks = totalAttacks
         self.totalLoss = totalLoss
         self.totalWins = totalWins
+        self.bannerImage = bannerImage
     }
     
-    func calculateEloRating(whoAttacked Attacker:King, whoDefended Defender:King, whoWon Winner:King, whoLost Loser:King) {
-        
-        Winner.eloRating = (Winner.eloRating + 400)
-        
+    func updateElorating(newElorating elo:Int){
+        self.eloRating = elo
     }
     
 }
