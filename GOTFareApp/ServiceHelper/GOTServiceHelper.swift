@@ -50,6 +50,9 @@ class GOTServiceHelper:NetworkRequestProtocol {
                 print(dic) //Output
                 self?.makeModel(kingJson: dic as [String: AnyObject])
             }
+            
+            //Calculating rating of kings
+            
  
             print(kingModels)
             // completion(self?.decode(data))
