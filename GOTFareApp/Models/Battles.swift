@@ -95,6 +95,21 @@ class Battle {
         self.attacker_king = self.checkKingExistsOrNot(name: attacker_king)
         self.defender_king = self.checkKingExistsOrNot(name: defender_king)
         
+        //Increase the count of no of attacks and defence for attacker and defender
+        self.attacker_king?.totalAttacks = 1
+        self.defender_king?.totalDefence = 1
+        
+        //Increae the count of no of wins and losses for attacker and defender
+        if(attacker_outcome == "win"){
+            self.attacker_king?.totalWins = 1
+            self.defender_king?.totalLoss = 1
+            self.attacker_king?.totalAttacksWon = 1
+        }else if (attacker_outcome == "loss"){
+            self.attacker_king?.totalLoss = 1
+            self.defender_king?.totalWins  = 1
+            self.defender_king?.totalDefenceWon = 1
+        }
+        
         ELOCalculator.calculateELORating(attackedBy: self.attacker_king!, defendedBy: self.defender_king!, attackerWon: self.getBattleOutcome(outcome: attacker_outcome), defenderWon: self.getBattleOutcome(outcome: attacker_outcome), itsDraw: self.getBattleOutcome(outcome: attacker_outcome))
     
     }

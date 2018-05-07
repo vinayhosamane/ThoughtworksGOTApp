@@ -23,6 +23,16 @@ class King: NSObject {
         }
     }
     
+    private var _totalDefenceWon:Int
+    var totalDefenceWon:Int {
+        set {
+            _totalDefenceWon = _totalDefenceWon + newValue
+        }
+        get {
+            return _totalDefenceWon
+        }
+    }
+    
     private var _totalAttacks:Int
     var totalAttacks:Int {
         set {
@@ -30,6 +40,16 @@ class King: NSObject {
         }
         get {
             return _totalAttacks
+        }
+    }
+    
+    private var _totalAttacksWon:Int
+    var totalAttacksWon:Int {
+        set {
+            _totalAttacksWon = _totalAttacksWon + newValue
+        }
+        get {
+            return _totalAttacksWon
         }
     }
 
@@ -74,6 +94,8 @@ class King: NSObject {
         _totalAttacks = 0
         _totalLoss = 0
         _totalWins = 0
+        _totalAttacksWon = 0
+        _totalDefenceWon = 0
         
         super.init()
         

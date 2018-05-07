@@ -39,18 +39,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         cell?.accessoryType = .disclosureIndicator
         
-        cell?.kingNameLabel.text = GOTViewModel.getKingName(index:indexPath.item)
-        cell?.kingEloRatingLabel.text = GOTViewModel.getKingEloRating(index:indexPath.item)
-        cell?.kingTotalAttacksLabel.text = GOTViewModel.getKingTotalAttacks(index: indexPath.item)
-        cell?.kingTotalDefenceLabel.text = GOTViewModel.getKingTotalDefence(index: indexPath.item)
-        cell?.kingTotalWinsLabel.text = GOTViewModel.getKingTotalWins(index: indexPath.item)
-        cell?.kingBanerImage.image = GOTViewModel.getKingBannerImage(index: indexPath.item)
+        cell?.kingNameLabel.text = GOTViewModel.getKingName(index:indexPath.row)
+        cell?.kingEloRatingLabel.text = GOTViewModel.getKingEloRating(index:indexPath.row)
+        cell?.kingTotalAttacksLabel.text = GOTViewModel.getKingTotalAttacks(index: indexPath.row)
+        cell?.kingTotalDefenceLabel.text = GOTViewModel.getKingTotalDefence(index: indexPath.row)
+        cell?.kingTotalWinsLabel.text = GOTViewModel.getKingTotalWins(index: indexPath.row)
+        cell?.kingBanerImage.image = GOTViewModel.getKingBannerImage(index: indexPath.row)
         
         return cell!
         }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      var detailsScreen =  GOTViewModel.takeMeToKingProfileScreen(table:tableView, index:indexPath)
+      let detailsScreen =  GOTViewModel.takeMeToKingProfileScreen(table:tableView, index:indexPath)
        
         self.navigationController?.pushViewController(detailsScreen, animated: true)
     }

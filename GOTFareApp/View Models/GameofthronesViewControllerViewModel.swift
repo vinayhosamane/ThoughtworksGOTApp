@@ -39,15 +39,15 @@ class GameofthronesViewControllerViewModel: loadGOTData {
     }
     
     func getKingTotalAttacks(index: Int) -> String {
-        return "12"
+        return String(format: "%d", allKings[index].totalAttacks)
     }
     
     func getKingTotalDefence(index: Int) -> String {
-        return "10"
+        return String(format: "%d", allKings[index].totalDefence)
     }
     
     func getKingTotalWins(index: Int) -> String {
-        return "9"
+       return String(format: "%d", allKings[index].totalWins)
     }
     
     func getKingBannerImage(index: Int) -> UIImage {

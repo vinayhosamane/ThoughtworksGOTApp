@@ -10,12 +10,13 @@ import UIKit
 
 class GOTDetailsTableCell: UITableViewCell {
 
-    @IBOutlet weak var profileTypeLabel: UILabel!
+    @IBOutlet  var profileTypeLabel: UILabel?
     
-    @IBOutlet weak var profileTypeScoreLabel: UILabel!
+    @IBOutlet  var profileTypeScoreLabel: UILabel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+      
         // Initialization code
     }
 

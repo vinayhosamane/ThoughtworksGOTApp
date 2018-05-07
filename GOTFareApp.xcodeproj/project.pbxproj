@@ -23,6 +23,7 @@
 		D43FD257209ECFD1003AEBD3 /* GOTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD256209ECFD1003AEBD3 /* GOTTableViewCell.swift */; };
 		D43FD25A20A09321003AEBD3 /* GOTDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25920A09321003AEBD3 /* GOTDetailsViewController.swift */; };
 		D43FD25D20A093ED003AEBD3 /* GOTDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25C20A093ED003AEBD3 /* GOTDetailsTableCell.swift */; };
+		D43FD25F20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25E20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D43FD256209ECFD1003AEBD3 /* GOTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTTableViewCell.swift; sourceTree = "<group>"; };
 		D43FD25920A09321003AEBD3 /* GOTDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsViewController.swift; sourceTree = "<group>"; };
 		D43FD25C20A093ED003AEBD3 /* GOTDetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsTableCell.swift; sourceTree = "<group>"; };
+		D43FD25E20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D43FD24F209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift */,
+				D43FD25E20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43FD25F20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift in Sources */,
 				D43FD25A20A09321003AEBD3 /* GOTDetailsViewController.swift in Sources */,
 				D43FD219209DE9C3003AEBD3 /* ViewController.swift in Sources */,
 				D43FD24E209E2DB7003AEBD3 /* King.swift in Sources */,
