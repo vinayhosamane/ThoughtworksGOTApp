@@ -55,17 +55,9 @@ class GOTServiceHelper:NetworkRequestProtocol {
             
             //Populate models for Battle
             for dic in jsonArray{
-                print(dic) //Output
                 self?.makeModel(kingJson: dic as [String: AnyObject])
             }
             
-            //Calculating rating of kings
-            self?.filterUniquenamesInTheArray()
-            
-            for battle in kingModels {
-                ELOCalculator.calculateELORating(inBattle: battle, attackedBy: (self?.getAttackerKingInThisBattle(battle: battle))!, defendedBy: (self?.getDefenderKingInThisBattle(battle: battle))!, attackerWon: (self?.getBattleOutcome(battle: battle))!, defenderWon: (self?.getBattleOutcome(battle: battle))!, itsDraw: (self?.getBattleOutcome(battle: battle))!)
-            }
- 
             for k in kingsList {
                 print(k.eloRating)
             }
@@ -92,97 +84,5 @@ class GOTServiceHelper:NetworkRequestProtocol {
         kingModels.append(myBattle)
         
     }
-    
-    func filterUniquenamesInTheArray() {
-        var testArray = [String]()
-        
-        for item in kingModels {
-            if testArray.contains(item.attacker_king!) {
-                //dont add
-                
-            }
-            else {
-                testArray.append(item.attacker_king!)
-               kingsList.append(King(kingName: item.attacker_king, bannerImage: self.getImageForKing(kingName: item.attacker_king!))!)
-            }
-            
-            if testArray.contains(item.defender_king!) {
-                //dont add
-            }
-            else {
-                testArray.append(item.defender_king!)
-                 kingsList.append(King(kingName: item.defender_king, bannerImage: self.getImageForKing(kingName: item.defender_king!))!)
-            }
-        }
-        
-        print(testArray)
-        
-    }
-    
-    func getImageForKing(kingName: String) -> UIImage? {
-        
-        var img:UIImage?
-        
-        switch(kingName){
-        case "Joffrey/Tommen Baratheon": do {
-               img = #imageLiteral(resourceName: "Lannister")
-               break
-            }
-        case "Balon/Euron Greyjoy": do {
-            img = #imageLiteral(resourceName: "Greyjoy")
-            break
-            }
-        case "Mance Rayder": do {
-            img = #imageLiteral(resourceName: "Mance")
-            break
-            }
-        case "Stannis Baratheon": do {
-            img = #imageLiteral(resourceName: "Stannis")
-             break
-            }
-        case "Renly Baratheon": do {
-            img = #imageLiteral(resourceName: "Renly")
-             break
-            }
-        case "Robb Stark": do {
-            img =  #imageLiteral(resourceName: "Stark")
-             break
-            }
-        default:
-            img = #imageLiteral(resourceName: "Stark")
-            break
-        }
-        
-        return img
 
-    }
-    
-    func getAttackerKingInThisBattle(battle:Battle) -> King?{
-        for king in kingsList {
-            if (battle.attacker_king == king.kingName){
-                return king
-            }
-        }
-        return nil
-    }
-    
-    func getDefenderKingInThisBattle(battle:Battle) -> King?{
-        for king in kingsList {
-            if (battle.defender_king == king.kingName){
-                return king
-            }
-        }
-        return nil
-    }
-    
-    func getBattleOutcome(battle:Battle) -> Battle_Outcome {
-        if (battle.attacker_outcome == "win") {
-            return .WON
-        }else if (battle.attacker_outcome == "loss"){
-            return .LOSS
-        }else {
-            return .DRAW
-        }
-    }
-    
 }

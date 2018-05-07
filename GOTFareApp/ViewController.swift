@@ -49,6 +49,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return cell!
         }
 
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      var detailsScreen =  GOTViewModel.takeMeToKingProfileScreen(table:tableView, index:indexPath)
+       
+        self.navigationController?.pushViewController(detailsScreen, animated: true)
+    }
 }
 

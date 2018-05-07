@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ELORatingCalculatorProtocol {
-  static  func calculateELORating(inBattle battle:Battle, attackedBy attacker: King,defendedBy defender: King, attackerWon attackerwon:Battle_Outcome, defenderWon defenderwon:Battle_Outcome , itsDraw draw:Battle_Outcome)
+  static  func calculateELORating(attackedBy attacker: King,defendedBy defender: King, attackerWon attackerwon:Battle_Outcome, defenderWon defenderwon:Battle_Outcome , itsDraw draw:Battle_Outcome)
 }
 
 class ELOCalculator: ELORatingCalculatorProtocol {
@@ -37,7 +37,7 @@ class ELOCalculator: ELORatingCalculatorProtocol {
      */
     
     
-   static func calculateELORating(inBattle battle:Battle, attackedBy attacker: King,defendedBy defender: King, attackerWon attackerwon:Battle_Outcome, defenderWon defenderwon:Battle_Outcome , itsDraw draw:Battle_Outcome) {
+   static func calculateELORating(attackedBy attacker: King,defendedBy defender: King, attackerWon attackerwon:Battle_Outcome, defenderWon defenderwon:Battle_Outcome , itsDraw draw:Battle_Outcome) {
         
         //Retrive the current rating of the player
         var r1:Double = Double(attacker.eloRating)

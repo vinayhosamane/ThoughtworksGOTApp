@@ -18,10 +18,12 @@ protocol loadGOTData {
     func getKingTotalDefence(index: Int) -> String
     func getKingTotalWins(index: Int) -> String
     func getKingBannerImage(index: Int) -> UIImage
+    func  takeMeToKingProfileScreen(table:UITableView, index:IndexPath) -> GOTDetailsViewController
 }
 
 var battlesList:[Battle]?
 var allKings = [King]()
+
 
 let GOTService:GOTServiceHelper = GOTServiceHelper()
 
@@ -69,6 +71,23 @@ class GameofthronesViewControllerViewModel: loadGOTData {
     //get number of rows for tableview
     func getNumberOfRows(Section: Int) -> Int? {
        return allKings.count
+    }
+    
+    func takeMeToKingProfileScreen(table: UITableView, index: IndexPath) -> GOTDetailsViewController {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let profileScreen = storyBoard.instantiateViewController(withIdentifier: "GOTDetails") as! GOTDetailsViewController
+        
+        profileScreen.kingProfile = kingsList[index.item]
+        
+        return profileScreen
+    }
+    
+  class  func getAllKings() -> [King] {
+        return kingsList
+    }
+    
+    class func addNewKingToList(king:King) {
+        kingsList.append(king)
     }
     
 }

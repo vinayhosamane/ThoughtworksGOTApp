@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import  UIKit
 
-class Battle: Decodable {
+class Battle {
     var name:String?
     var year:Int?
     var battle_number:Int?
-    var attacker_king:String?
-    var defender_king:String?
+    var attacker_king:King?
+    var defender_king:King?
     var attacker_1:String?
     var attacker_2:String?
     var attacker_3:String?
@@ -69,8 +70,7 @@ class Battle: Decodable {
         self.name = name
         self.year = year
         self.battle_number = battle_number
-        self.attacker_king = attacker_king
-        self.defender_king = defender_king
+       
         self.attacker_1 = attacker_1
         self.attacker_2 = attacker_2
         self.attacker_3 = attacker_3
@@ -91,8 +91,78 @@ class Battle: Decodable {
         self.location = location
         self.region = region
         self.note = note
+        
+        self.attacker_king = self.checkKingExistsOrNot(name: attacker_king)
+        self.defender_king = self.checkKingExistsOrNot(name: defender_king)
+        
+        ELOCalculator.calculateELORating(attackedBy: self.attacker_king!, defendedBy: self.defender_king!, attackerWon: self.getBattleOutcome(outcome: attacker_outcome), defenderWon: self.getBattleOutcome(outcome: attacker_outcome), itsDraw: self.getBattleOutcome(outcome: attacker_outcome))
     
     }
+    
+    func checkKingExistsOrNot(name:String) -> King? {
+       let kings = GameofthronesViewControllerViewModel.getAllKings()
+        
+        for king in kings {
+            if(king.kingName == name){
+                return king
+            }
+        }
+    
+        let newKing = King(kingName: name, bannerImage:self.getImageForKing(kingName: name) )
+        
+        GameofthronesViewControllerViewModel.addNewKingToList(king: newKing!)
+        
+        return newKing
+    }
+    
+    func getImageForKing(kingName: String) -> UIImage? {
+        
+        var img:UIImage?
+        
+        switch(kingName){
+        case "Joffrey/Tommen Baratheon": do {
+            img = #imageLiteral(resourceName: "Lannister")
+            break
+            }
+        case "Balon/Euron Greyjoy": do {
+            img = #imageLiteral(resourceName: "Greyjoy")
+            break
+            }
+        case "Mance Rayder": do {
+            img = #imageLiteral(resourceName: "Mance")
+            break
+            }
+        case "Stannis Baratheon": do {
+            img = #imageLiteral(resourceName: "Stannis")
+            break
+            }
+        case "Renly Baratheon": do {
+            img = #imageLiteral(resourceName: "Renly")
+            break
+            }
+        case "Robb Stark": do {
+            img =  #imageLiteral(resourceName: "Stark")
+            break
+            }
+        default:
+            img = #imageLiteral(resourceName: "Stark")
+            break
+        }
+        
+        return img
+        
+    }
+    
+    func getBattleOutcome(outcome:String) -> Battle_Outcome {
+        if (outcome == "win") {
+            return .WON
+        }else if (outcome == "loss"){
+            return .LOSS
+        }else {
+            return .DRAW
+        }
+    }
+    
 
 }
 

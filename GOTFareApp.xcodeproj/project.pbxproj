@@ -21,6 +21,8 @@
 		D43FD250209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD24F209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift */; };
 		D43FD253209ECA5B003AEBD3 /* BussinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD252209ECA5B003AEBD3 /* BussinessLogic.swift */; };
 		D43FD257209ECFD1003AEBD3 /* GOTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD256209ECFD1003AEBD3 /* GOTTableViewCell.swift */; };
+		D43FD25A20A09321003AEBD3 /* GOTDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25920A09321003AEBD3 /* GOTDetailsViewController.swift */; };
+		D43FD25D20A093ED003AEBD3 /* GOTDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25C20A093ED003AEBD3 /* GOTDetailsTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		D43FD24F209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameofthronesViewControllerViewModel.swift; sourceTree = "<group>"; };
 		D43FD252209ECA5B003AEBD3 /* BussinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BussinessLogic.swift; sourceTree = "<group>"; };
 		D43FD256209ECFD1003AEBD3 /* GOTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTTableViewCell.swift; sourceTree = "<group>"; };
+		D43FD25920A09321003AEBD3 /* GOTDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsViewController.swift; sourceTree = "<group>"; };
+		D43FD25C20A093ED003AEBD3 /* GOTDetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 		D43FD215209DE9C3003AEBD3 /* GOTFareApp */ = {
 			isa = PBXGroup;
 			children = (
+				D43FD25B20A093C7003AEBD3 /* GOTDetailsProfileTableCell */,
+				D43FD25820A092F0003AEBD3 /* GOTDetailsViewController */,
 				D43FD255209ECFA7003AEBD3 /* GotCell */,
 				D43FD254209ECA5F003AEBD3 /* Bussiness Logic */,
 				D43FD251209EB334003AEBD3 /* View Models */,
@@ -184,6 +190,22 @@
 				D43FD256209ECFD1003AEBD3 /* GOTTableViewCell.swift */,
 			);
 			path = GotCell;
+			sourceTree = "<group>";
+		};
+		D43FD25820A092F0003AEBD3 /* GOTDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D43FD25920A09321003AEBD3 /* GOTDetailsViewController.swift */,
+			);
+			path = GOTDetailsViewController;
+			sourceTree = "<group>";
+		};
+		D43FD25B20A093C7003AEBD3 /* GOTDetailsProfileTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D43FD25C20A093ED003AEBD3 /* GOTDetailsTableCell.swift */,
+			);
+			path = GOTDetailsProfileTableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43FD25A20A09321003AEBD3 /* GOTDetailsViewController.swift in Sources */,
 				D43FD219209DE9C3003AEBD3 /* ViewController.swift in Sources */,
 				D43FD24E209E2DB7003AEBD3 /* King.swift in Sources */,
 				D43FD21F209DE9C3003AEBD3 /* GOTFareApp.xcdatamodeld in Sources */,
@@ -324,6 +347,7 @@
 				D43FD253209ECA5B003AEBD3 /* BussinessLogic.swift in Sources */,
 				D43FD24C209DF20A003AEBD3 /* GOTServiceHelper.swift in Sources */,
 				D43FD217209DE9C3003AEBD3 /* AppDelegate.swift in Sources */,
+				D43FD25D20A093ED003AEBD3 /* GOTDetailsTableCell.swift in Sources */,
 				D43FD250209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift in Sources */,
 				D43FD257209ECFD1003AEBD3 /* GOTTableViewCell.swift in Sources */,
 			);

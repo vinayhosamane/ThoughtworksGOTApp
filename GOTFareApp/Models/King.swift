@@ -12,12 +12,49 @@ import UIKit
 class King: NSObject {
     
     var kingName: String?
-    //    var totalDefence: Int?
-    //    var totalAttacks:Int?
+    
+    private var _totalDefence:Int
+    var totalDefence:Int {
+        set {
+            _totalDefence = _totalDefence + newValue
+        }
+        get {
+            return _totalDefence
+        }
+    }
+    
+    private var _totalAttacks:Int
+    var totalAttacks:Int {
+        set {
+            _totalAttacks = _totalAttacks + newValue
+        }
+        get {
+            return _totalAttacks
+        }
+    }
+
     var bannerImage: UIImage?
-    //
-    //    var totalWins: Int = 0
-    //    var totalLoss: Int = 0
+    
+    private var _totalWins:Int
+    var totalWins:Int {
+        set {
+            _totalWins = _totalWins + newValue
+        }
+        get {
+            return _totalWins
+        }
+    }
+    
+    private var _totalLoss:Int
+    var totalLoss:Int {
+        set {
+            _totalLoss = _totalLoss + newValue
+        }
+        get {
+            return _totalLoss
+        }
+    }
+
     private var _eloRating:Double //= 400.0
     var eloRating: Double {
         set{
@@ -28,16 +65,20 @@ class King: NSObject {
         }
     }
     
+    var battles:[Battle]
+    
     init?(kingName:String?,bannerImage:UIImage?) {
         _eloRating = 400.0
+          battles = []
+        _totalDefence = 0
+        _totalAttacks = 0
+        _totalLoss = 0
+        _totalWins = 0
+        
         super.init()
         
         self.kingName = kingName
         self.bannerImage = bannerImage
-    }
-    
-    func updateElorating(newElorating elo:Double){
-        self.eloRating = elo
     }
 
 }
