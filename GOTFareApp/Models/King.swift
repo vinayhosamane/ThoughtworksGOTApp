@@ -18,18 +18,26 @@ class King: NSObject {
     //
     //    var totalWins: Int = 0
     //    var totalLoss: Int = 0
-    var eloRating: Int = 400
+    private var _eloRating:Double //= 400.0
+    var eloRating: Double {
+        set{
+            _eloRating=newValue
+        }
+        get{
+            return _eloRating
+        }
+    }
     
     init?(kingName:String?,bannerImage:UIImage?) {
-        
+        _eloRating = 400.0
         super.init()
         
         self.kingName = kingName
         self.bannerImage = bannerImage
     }
     
-    func updateElorating(newElorating elo:Int){
+    func updateElorating(newElorating elo:Double){
         self.eloRating = elo
     }
-    
+
 }

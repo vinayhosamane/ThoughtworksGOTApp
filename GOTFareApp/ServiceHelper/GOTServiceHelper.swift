@@ -9,9 +9,15 @@
 import Foundation
 import UIKit
 
+enum Battle_Outcome {
+    case WON
+    case LOSS
+    case DRAW
+}
+
 protocol NetworkRequestProtocol {
     
-    func load(withSuccess SuccessBlock: @escaping ([King]) -> (),withFailure ErrorBlock: @escaping (NSError)->())
+    func load(withSuccess SuccessBlock: @escaping ([King]) -> (),withFailure ErrorBlock: (NSError)->())
     func makeModel(kingJson: [String: AnyObject])
     
 }
@@ -20,13 +26,13 @@ var kingModels = [Battle]()
 var kingsList = [King]()
 
 class GOTServiceHelper:NetworkRequestProtocol {
-    
+
     var url: URL {
         let baseUrl = "http://starlord.hackerearth.com/gotjson"
         return URL(string: baseUrl)!
     }
     
-    func load(withSuccess SuccessBlock: @escaping ([King]) -> (),withFailure ErrorBlock: @escaping (NSError)->() ) {
+    func load(withSuccess SuccessBlock: @escaping ([King]) -> (),withFailure ErrorBlock: (NSError)->() ) {
         
         let configuration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
@@ -55,13 +61,21 @@ class GOTServiceHelper:NetworkRequestProtocol {
             
             //Calculating rating of kings
             self?.filterUniquenamesInTheArray()
- 
-            print(kingModels)
             
-            DispatchQueue.main.async {
-                SuccessBlock(kingsList)
+            for battle in kingModels {
+                ELOCalculator.calculateELORating(inBattle: battle, attackedBy: (self?.getAttackerKingInThisBattle(battle: battle))!, defendedBy: (self?.getDefenderKingInThisBattle(battle: battle))!, attackerWon: (self?.getBattleOutcome(battle: battle))!, defenderWon: (self?.getBattleOutcome(battle: battle))!, itsDraw: (self?.getBattleOutcome(battle: battle))!)
+            }
+ 
+            for k in kingsList {
+                print(k.eloRating)
             }
             
+            kingsList = kingsList.sorted(by: { (a, b) -> Bool in
+                return a.eloRating > b.eloRating
+            })
+            
+            SuccessBlock(kingsList)
+
             // completion(self?.decode(data))
         })
         task.resume()
@@ -85,6 +99,7 @@ class GOTServiceHelper:NetworkRequestProtocol {
         for item in kingModels {
             if testArray.contains(item.attacker_king!) {
                 //dont add
+                
             }
             else {
                 testArray.append(item.attacker_king!)
@@ -139,7 +154,35 @@ class GOTServiceHelper:NetworkRequestProtocol {
         }
         
         return img
-        
+
+    }
+    
+    func getAttackerKingInThisBattle(battle:Battle) -> King?{
+        for king in kingsList {
+            if (battle.attacker_king == king.kingName){
+                return king
+            }
+        }
+        return nil
+    }
+    
+    func getDefenderKingInThisBattle(battle:Battle) -> King?{
+        for king in kingsList {
+            if (battle.defender_king == king.kingName){
+                return king
+            }
+        }
+        return nil
+    }
+    
+    func getBattleOutcome(battle:Battle) -> Battle_Outcome {
+        if (battle.attacker_outcome == "win") {
+            return .WON
+        }else if (battle.attacker_outcome == "loss"){
+            return .LOSS
+        }else {
+            return .DRAW
+        }
     }
     
 }
