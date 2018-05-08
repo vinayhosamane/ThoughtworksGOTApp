@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
  
     var GOTViewModel = GameofthronesViewControllerViewModel()
+    let activityLoader = ActivityIndicatorView.init()
     
     @IBOutlet weak var gotTableView:UITableView!
     
@@ -21,8 +22,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         self.navigationController?.navigationBar.backgroundColor = UIColor.yellow
         
-        GOTViewModel.loadGameofthronesDataFromWebService()
-        
+      //  activityLoader.addActivityIndicatorToView(view: self.view)
+        GOTViewModel.loadGameofthronesDataFromWebService(from: self)
+//         activityLoader.removeActivityIndicatorFromView()
         // Do any additional setup after loading the view, typically from a nib.
     }
     

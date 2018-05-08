@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol loadGOTData {
-    func loadGameofthronesDataFromWebService()
+    func loadGameofthronesDataFromWebService(from viewcontroller: UIViewController)
     func getNumberOfRows(Section:Int) -> Int?
     func getKingName(index: Int) -> String
     func getKingEloRating(index:Int) -> String
@@ -19,6 +19,8 @@ protocol loadGOTData {
     func getKingTotalWins(index: Int) -> String
     func getKingBannerImage(index: Int) -> UIImage
     func  takeMeToKingProfileScreen(table:UITableView, index:IndexPath) -> GOTDetailsViewController
+    static  func getAllKings() -> [King]
+    static func addNewKingToList(king:King)
 }
 
 var battlesList:[Battle]?
@@ -26,6 +28,7 @@ var allKings = [King]()
 
 
 let GOTService:GOTServiceHelper = GOTServiceHelper()
+let activityLoader = ActivityIndicatorView.init()
 
 class GameofthronesViewControllerViewModel: loadGOTData {
     var tableDelegate:ViewController?
@@ -55,14 +58,15 @@ class GameofthronesViewControllerViewModel: loadGOTData {
     }
     
     //Load data from web service
-    func loadGameofthronesDataFromWebService() {
+    func loadGameofthronesDataFromWebService(from viewcontroller:UIViewController) {
         
+        activityLoader.addActivityIndicatorToView(view: viewcontroller.view)
         GOTService.load(withSuccess: { (kings) in
             allKings = kings
             DispatchQueue.main.async {
+                activityLoader.removeActivityIndicatorFromView()
                 self.tableDelegate?.gotTableView.reloadData()
             }
-            
         }) { (error) in
             print(error)
         }
@@ -82,11 +86,11 @@ class GameofthronesViewControllerViewModel: loadGOTData {
         return profileScreen
     }
     
-  class  func getAllKings() -> [King] {
+  static  func getAllKings() -> [King] {
         return kingsList
     }
     
-    class func addNewKingToList(king:King) {
+  static func addNewKingToList(king:King) {
         kingsList.append(king)
     }
     

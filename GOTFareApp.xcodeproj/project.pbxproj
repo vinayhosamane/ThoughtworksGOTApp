@@ -24,6 +24,7 @@
 		D43FD25A20A09321003AEBD3 /* GOTDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25920A09321003AEBD3 /* GOTDetailsViewController.swift */; };
 		D43FD25D20A093ED003AEBD3 /* GOTDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25C20A093ED003AEBD3 /* GOTDetailsTableCell.swift */; };
 		D43FD25F20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25E20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift */; };
+		D4BBCE4C20A1C282001F1408 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BBCE4B20A1C282001F1408 /* ActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D43FD25920A09321003AEBD3 /* GOTDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsViewController.swift; sourceTree = "<group>"; };
 		D43FD25C20A093ED003AEBD3 /* GOTDetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsTableCell.swift; sourceTree = "<group>"; };
 		D43FD25E20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsViewModel.swift; sourceTree = "<group>"; };
+		D4BBCE4B20A1C282001F1408 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			children = (
 				D43FD24F209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift */,
 				D43FD25E20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift */,
+				D4BBCE4B20A1C282001F1408 /* ActivityIndicatorView.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				D43FD217209DE9C3003AEBD3 /* AppDelegate.swift in Sources */,
 				D43FD25D20A093ED003AEBD3 /* GOTDetailsTableCell.swift in Sources */,
 				D43FD250209EB32D003AEBD3 /* GameofthronesViewControllerViewModel.swift in Sources */,
+				D4BBCE4C20A1C282001F1408 /* ActivityIndicatorView.swift in Sources */,
 				D43FD257209ECFD1003AEBD3 /* GOTTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

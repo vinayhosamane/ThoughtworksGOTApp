@@ -37,7 +37,9 @@ class GOTServiceHelper:NetworkRequestProtocol {
         let configuration = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
         
-        let task = session.dataTask(with: url, completionHandler: { [weak self] (data: Data?, response: URLResponse?, error: Error?)  -> Void in
+        let urlRequest = URLRequest(url: url)
+        
+        let task = session.dataTask(with: urlRequest, completionHandler: { [weak self] (data: Data?, response: URLResponse?, error: Error?)  -> Void in
            
             guard let data = data else {
                 // completion(nil)
