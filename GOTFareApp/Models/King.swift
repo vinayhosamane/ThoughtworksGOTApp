@@ -85,11 +85,12 @@ class King: NSObject {
         }
     }
     
-    var battles:[Battle]
+    var _battlesFought:[Battle] //= 400.0
+   
     
     init?(kingName:String?,bannerImage:UIImage?) {
         _eloRating = 400.0
-          battles = []
+          _battlesFought = []
         _totalDefence = 0
         _totalAttacks = 0
         _totalLoss = 0

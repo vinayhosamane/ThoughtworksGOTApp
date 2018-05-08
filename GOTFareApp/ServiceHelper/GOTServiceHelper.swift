@@ -83,6 +83,9 @@ class GOTServiceHelper:NetworkRequestProtocol {
             return
         }
         
+        myBattle.attacker_king?._battlesFought.append(myBattle)
+        myBattle.defender_king?._battlesFought.append(myBattle)
+        
         kingModels.append(myBattle)
         
     }

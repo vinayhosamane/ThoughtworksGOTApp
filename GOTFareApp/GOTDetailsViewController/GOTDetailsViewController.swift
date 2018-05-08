@@ -49,14 +49,41 @@ class GOTDetailsViewController: UIViewController,UITableViewDelegate,UITableView
         return 73
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rowLabelNames.count
+        
+        if(section==0) {
+            return rowLabelNames.count
+        }
+        
+        return (kingProfile?._battlesFought.count)!
+        
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 1 {
+            return "Battles Fought"
+        }
+        return "Score Card"
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
          let cell = tableView.dequeueReusableCell(withIdentifier: "GOT_DETAILS", for: indexPath) as! GOTDetailsTableCell
-        cell.profileTypeLabel?.text = rowLabelNames[indexPath.row]
-        cell.profileTypeScoreLabel?.text = rowScoreDetails[indexPath.row]
+        if(indexPath.section == 0)
+        {
+            cell.profileTypeScoreLabel?.isHidden = false
+            cell.profileTypeLabel?.text = rowLabelNames[indexPath.row]
+            cell.profileTypeScoreLabel?.text = rowScoreDetails[indexPath.row]
+        }
+        else
+        {
+             cell.profileTypeLabel?.text = kingProfile?._battlesFought[indexPath.row].name
+            cell.profileTypeScoreLabel?.isHidden = true
+        }
         
         return cell
         

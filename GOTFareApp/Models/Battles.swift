@@ -42,8 +42,8 @@ class Battle {
     var name:String?
     var year:Int?
     var battle_number:Int?
-    var attacker_king:King?
-    var defender_king:King?
+  weak  var attacker_king:King?
+  weak var defender_king:King?
     var attacker_1:String?
     var attacker_2:String?
     var attacker_3:String?
