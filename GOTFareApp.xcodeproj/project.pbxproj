@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C9C88B27C0DFA499C01C2E5 /* Pods_GOTFareAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A31AEF1C0D4B20F839C8E1E /* Pods_GOTFareAppTests.framework */; };
+		9B7C1093EE37631D944FE81C /* Pods_GOTFareAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F255E47D1B08B16E894B521 /* Pods_GOTFareAppUITests.framework */; };
 		D43FD217209DE9C3003AEBD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD216209DE9C3003AEBD3 /* AppDelegate.swift */; };
 		D43FD219209DE9C3003AEBD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD218209DE9C3003AEBD3 /* ViewController.swift */; };
 		D43FD21C209DE9C3003AEBD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43FD21A209DE9C3003AEBD3 /* Main.storyboard */; };
@@ -25,6 +27,7 @@
 		D43FD25D20A093ED003AEBD3 /* GOTDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25C20A093ED003AEBD3 /* GOTDetailsTableCell.swift */; };
 		D43FD25F20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FD25E20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift */; };
 		D4BBCE4C20A1C282001F1408 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BBCE4B20A1C282001F1408 /* ActivityIndicatorView.swift */; };
+		EE630B1F4B3B09D7BCB5BD5D /* Pods_GOTFareApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB21D2E5A9D0FD5534600749 /* Pods_GOTFareApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07B4A7009C6DF70A874EA46B /* Pods-GOTFareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOTFareApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOTFareApp/Pods-GOTFareApp.release.xcconfig"; sourceTree = "<group>"; };
+		07FC68F809139EFF30169B4E /* Pods-GOTFareApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOTFareApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GOTFareApp/Pods-GOTFareApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4F255E47D1B08B16E894B521 /* Pods_GOTFareAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOTFareAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A31AEF1C0D4B20F839C8E1E /* Pods_GOTFareAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOTFareAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7532332BD0BE2CB0F0CA675E /* Pods-GOTFareAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOTFareAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOTFareAppUITests/Pods-GOTFareAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		88B5888B9351912B59A292FD /* Pods-GOTFareAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOTFareAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOTFareAppTests/Pods-GOTFareAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		CBD32378A6A1BBC30617647A /* Pods-GOTFareAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOTFareAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GOTFareAppUITests/Pods-GOTFareAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D43FD213209DE9C3003AEBD3 /* GOTFareApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOTFareApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43FD216209DE9C3003AEBD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D43FD218209DE9C3003AEBD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +79,8 @@
 		D43FD25C20A093ED003AEBD3 /* GOTDetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsTableCell.swift; sourceTree = "<group>"; };
 		D43FD25E20A0CAEE003AEBD3 /* GOTDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDetailsViewModel.swift; sourceTree = "<group>"; };
 		D4BBCE4B20A1C282001F1408 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		DB21D2E5A9D0FD5534600749 /* Pods_GOTFareApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOTFareApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7055310EE0A466AB098F16F /* Pods-GOTFareAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOTFareAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GOTFareAppTests/Pods-GOTFareAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE630B1F4B3B09D7BCB5BD5D /* Pods_GOTFareApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9C88B27C0DFA499C01C2E5 /* Pods_GOTFareAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,12 +104,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7C1093EE37631D944FE81C /* Pods_GOTFareAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8437117837BB4A54DCC63ACD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB21D2E5A9D0FD5534600749 /* Pods_GOTFareApp.framework */,
+				6A31AEF1C0D4B20F839C8E1E /* Pods_GOTFareAppTests.framework */,
+				4F255E47D1B08B16E894B521 /* Pods_GOTFareAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC711A49248725814A306B86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07FC68F809139EFF30169B4E /* Pods-GOTFareApp.debug.xcconfig */,
+				07B4A7009C6DF70A874EA46B /* Pods-GOTFareApp.release.xcconfig */,
+				E7055310EE0A466AB098F16F /* Pods-GOTFareAppTests.debug.xcconfig */,
+				88B5888B9351912B59A292FD /* Pods-GOTFareAppTests.release.xcconfig */,
+				CBD32378A6A1BBC30617647A /* Pods-GOTFareAppUITests.debug.xcconfig */,
+				7532332BD0BE2CB0F0CA675E /* Pods-GOTFareAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D43FD20A209DE9C3003AEBD3 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +141,8 @@
 				D43FD22D209DE9C8003AEBD3 /* GOTFareAppTests */,
 				D43FD238209DE9C8003AEBD3 /* GOTFareAppUITests */,
 				D43FD214209DE9C3003AEBD3 /* Products */,
+				CC711A49248725814A306B86 /* Pods */,
+				8437117837BB4A54DCC63ACD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D43FD23E209DE9C8003AEBD3 /* Build configuration list for PBXNativeTarget "GOTFareApp" */;
 			buildPhases = (
+				5EA6C5CF6A25F59FEF89C4CD /* [CP] Check Pods Manifest.lock */,
 				D43FD20F209DE9C3003AEBD3 /* Sources */,
 				D43FD210209DE9C3003AEBD3 /* Frameworks */,
 				D43FD211209DE9C3003AEBD3 /* Resources */,
+				EE81786CC4D49481138637AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D43FD241209DE9C8003AEBD3 /* Build configuration list for PBXNativeTarget "GOTFareAppTests" */;
 			buildPhases = (
+				3DA25756D3890F02949A6304 /* [CP] Check Pods Manifest.lock */,
 				D43FD226209DE9C8003AEBD3 /* Sources */,
 				D43FD227209DE9C8003AEBD3 /* Frameworks */,
 				D43FD228209DE9C8003AEBD3 /* Resources */,
@@ -256,6 +299,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D43FD244209DE9C8003AEBD3 /* Build configuration list for PBXNativeTarget "GOTFareAppUITests" */;
 			buildPhases = (
+				542E0E53F5441BE5D5004FD0 /* [CP] Check Pods Manifest.lock */,
 				D43FD231209DE9C8003AEBD3 /* Sources */,
 				D43FD232209DE9C8003AEBD3 /* Frameworks */,
 				D43FD233209DE9C8003AEBD3 /* Resources */,
@@ -339,6 +383,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DA25756D3890F02949A6304 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GOTFareAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		542E0E53F5441BE5D5004FD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GOTFareAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EA6C5CF6A25F59FEF89C4CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GOTFareApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE81786CC4D49481138637AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GOTFareApp/Pods-GOTFareApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GOTFareApp/Pods-GOTFareApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D43FD20F209DE9C3003AEBD3 /* Sources */ = {
@@ -528,15 +649,13 @@
 		};
 		D43FD23F209DE9C8003AEBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FC68F809139EFF30169B4E /* Pods-GOTFareApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSD48CFFKJ;
 				INFOPLIST_FILE = GOTFareApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Personal.GOTFareApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -546,15 +665,13 @@
 		};
 		D43FD240209DE9C8003AEBD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07B4A7009C6DF70A874EA46B /* Pods-GOTFareApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSD48CFFKJ;
 				INFOPLIST_FILE = GOTFareApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Personal.GOTFareApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -564,17 +681,14 @@
 		};
 		D43FD242209DE9C8003AEBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7055310EE0A466AB098F16F /* Pods-GOTFareAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSD48CFFKJ;
 				INFOPLIST_FILE = GOTFareAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Personal.GOTFareAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -585,17 +699,14 @@
 		};
 		D43FD243209DE9C8003AEBD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B5888B9351912B59A292FD /* Pods-GOTFareAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSD48CFFKJ;
 				INFOPLIST_FILE = GOTFareAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Personal.GOTFareAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -606,16 +717,13 @@
 		};
 		D43FD245209DE9C8003AEBD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD32378A6A1BBC30617647A /* Pods-GOTFareAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSD48CFFKJ;
 				INFOPLIST_FILE = GOTFareAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Personal.GOTFareAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -626,16 +734,13 @@
 		};
 		D43FD246209DE9C8003AEBD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7532332BD0BE2CB0F0CA675E /* Pods-GOTFareAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSD48CFFKJ;
 				INFOPLIST_FILE = GOTFareAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Personal.GOTFareAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
