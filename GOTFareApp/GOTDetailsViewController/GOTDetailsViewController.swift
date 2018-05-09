@@ -63,11 +63,27 @@ class GOTDetailsViewController: UIViewController,UITableViewDelegate,UITableView
         
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if section == 1 {
+//            return "Battles Fought"
+//        }
+//        return "Score Card"
+//    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let vw = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 30))
+        label.textColor = UIColor.white
+         label.text = "Score Card"
+        
         if section == 1 {
-            return "Battles Fought"
+           label.text = "Battles Fought"
         }
-        return "Score Card"
+        vw.addSubview(label)
+        vw.backgroundColor = UIColor.black
+        
+        return vw
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
